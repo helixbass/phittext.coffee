@@ -2,7 +2,6 @@
   $.fn
    .phitText =
     ( options ) ->
-     $this = $ @
      $window = $ window
      settings = $.extend minFontSize:
                           Number
@@ -15,8 +14,7 @@
                         ,
                          options
 
-     $this
-      .each ->
+     @.each ->
         $this = $ @
         (( f ) ->
           f()
@@ -51,4 +49,5 @@
                                                 .minFontSize )
                   ,
                    $this )
+     @
 ) jQuery
